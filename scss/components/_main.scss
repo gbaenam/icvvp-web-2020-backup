@@ -13,7 +13,7 @@
 
     // section-series__description
     --series-margin-bottom-description: 1.5rem;
-    
+
     // Referencia para button
     // font-size: 1rem;
 
@@ -53,13 +53,13 @@
         text-align: left;
         grid-column-gap: 1.875rem;
 
-        grid-template-areas: 
+        grid-template-areas:
             "header header ratio ratio ratio"
             "description description ratio ratio ratio"
             "button button ratio ratio ratio";
     }
 
-    
+
     @include from(zlarge) {
         // .section-series__title
         --series-font-size-title: 2.5rem;
@@ -86,7 +86,7 @@
         font-size: var(--series-font-size-title);
         margin-bottom: var(--series-margin-bottom-title);
     }
-    
+
     &__subtitle {
         font-weight: 600;
         margin: 0 0 1rem;
@@ -105,7 +105,7 @@
         margin-right: auto;
         width: var(--series-width-image);
     }
-    
+
     &__description {
         grid-area: description;
         padding: var(--series-padding-description);
@@ -115,7 +115,7 @@
 
 .button-series {
     grid-area: button;
-    align-self: var(--series-align-self-button);    
+    align-self: var(--series-align-self-button);
     justify-self: var(--series-justify-self-button);
 }
 
@@ -161,7 +161,7 @@
         margin: 0 0 1rem;
         padding: 0 .5rem;
                     // background-color: pink;
-                    
+
         @include from(360px) {
             font-size: 1rem;
         }
@@ -195,7 +195,7 @@
     @include from(large) {
         justify-content: space-between;
     }
-    
+
 }
 
 .card {
@@ -231,22 +231,22 @@
     &__tobe {
         background-color: rgba(18, 117, 237, 1);
     }
-    
+
     // Color escuela del Permanecer, hexadecimal: #ce030b
     &__stay {
         background-color: rgba(206, 3, 11, 1);
     }
-    
+
     // Color escuela del Hacer, hexadecimal: #ffa500
     &__do {
         background-color: rgba(255, 165, 0, 1);
     }
-    
+
     // Color escuela de Pescadores, hexadecimal: #008000
     &__fishermen {
         background-color: rgba(0, 128, 0, 1);
     }
-    
+
     &__image {
         margin-bottom: .5rem;
         border-top-left-radius: 20px;
@@ -268,13 +268,13 @@
     //     background-color: var(--gray-rgba);
     // }
 
-    
+
     &__title {
         // background-color: var(--green-rgba);
 
                 text-align: center;
     }
-    
+
     &__description {
         // display: flex;
         padding: 0 1rem;
@@ -302,10 +302,10 @@
         //     min-height: 11.875rem;
         // }
     }
-    
+
     &__text,
     &__verse {
-        background-color: var(--yellow-rgba); 
+        background-color: var(--yellow-rgba);
     }
 
     &__verse {
@@ -319,14 +319,14 @@
         align-items: center;
         justify-content: center;
                     background-color: var(--pink-rgba);
-                    
+
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
 }
 
 // .card:hover {
-    
+
 
 //     box-shadow: 0 5px 10px -2px rgba(0, 0, 0, .8);
 

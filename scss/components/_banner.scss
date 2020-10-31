@@ -13,10 +13,10 @@
 
     // main-banner__hero-image
     --object-position: top left;
-    
+
 
     /*------------ main-banner-content ---------*/
-    
+
     // main-banner__button-logo
     --margin-bottom-logo: .5rem;
 
@@ -93,7 +93,7 @@
         height: 100%;
         object-fit: cover;
         position: absolute;
-        object-position: var(--object-position); 
+        object-position: var(--object-position);
     }
 
     &__content {

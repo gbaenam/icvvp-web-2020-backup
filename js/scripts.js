@@ -5,7 +5,7 @@ addEventListener('DOMContentLoaded', () => {
     const   burgerButton = document.querySelector('.burguer-button'),
             burgerInner = document.querySelector('.burguer-inner'),
             navMain = document.getElementById('main-nav')
-    
+
     burgerButton.addEventListener('click', () => {
         burgerInner.classList.toggle('cruz')
         navMain.classList.toggle('main-nav-move')
@@ -26,7 +26,7 @@ addEventListener('DOMContentLoaded', () => {
 
 
     const changeIcons = () => {
-    
+
 
         if (mediaQuery.matches) {
             mobileIcons.remove()
@@ -44,7 +44,7 @@ addEventListener('DOMContentLoaded', () => {
     changeIcons()
 
     mediaQuery.addListener(changeIcons)
-    
+
 })
 
 

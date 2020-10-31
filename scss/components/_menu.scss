@@ -1,7 +1,7 @@
 
 /****** Main NAV ******/
 .main-nav {
-    
+
     // .main-nav
     --width-main-nav: 80vw;
     --position-main-nav: fixed;
@@ -13,10 +13,10 @@
 
     // .checkin__icon || .contact__icon || width.
     --icons-width: 3.5rem;
-    
+
     // .contact__icon || margin-left.
     --icon-contact-margin-left: 1.1rem;
-    
+
     // .main-menu
     --border-top-main-menu: 1px solid #11191e;
 
@@ -36,7 +36,7 @@
 
     // .main-menu__link:hover
     --font-color-link-hover: #fff;
-    
+
     @include from(xmedium) {
 
         // .main-nav
@@ -49,21 +49,21 @@
         --flex-direction-main-nav: row;
         --background-color-main-nav: transparent;
 
-        // .main-nav 
+        // .main-nav
         z-index: var(--z-normal);
-        
+
         // .checkin__icon || .contact__icon || width.
         --icons-width: 3rem;
 
         // .contact__icon || margin-left.
         --icon-contact-margin-left: 1.5rem;
-        
+
         // .main-menu
         --order-main-menu: -1;
         --display-main-menu: flex;
         --border-top-main-menu: none;
         --margin-right-main-menu: 2rem;
-        
+
         // .main-menu__item
         --border-top-item: none;
         --margin-right-item: .625rem;
