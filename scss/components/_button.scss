@@ -1,0 +1,47 @@
+// $pseudoclases: false;
+
+.button {
+    color: #fff;
+    padding: .5em 0;
+    position: relative;
+    border-radius: 2em;
+    text-transform: uppercase;
+    background-color: #20cf0f;
+    font-family: 'Oswald', sans-serif;
+    border: .144230769em solid transparent;
+    // transition: color .5s, background .5s, border .5s;
+    
+    @if $pseudoclases {
+        &:focus {
+            color: #e28120;
+            border-color: #e28120;
+            background-color: transparent;
+        }
+        
+        &:hover {
+            color: white;
+            background-color: #e28120;
+        }
+        
+        &:active {
+            top: .06em;
+            left: .06em;
+            color: white;
+            background-color: darkred;
+            border-color: transparent;
+        }
+    }
+}
+
+.button-main {
+    font-size: var(--font-size-button);
+    min-width: var(--min-width-button);
+}
+
+.button-card {
+    font-size: var(--font-size-button-card);
+    min-width: var(--min-width-button-card);
+}
+
+
+

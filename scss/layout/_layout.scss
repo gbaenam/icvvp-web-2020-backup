@@ -1,0 +1,80 @@
+// Este archivo contiene las clases correspondientes únicamente a layout.
+
+.general-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header__layout {
+
+    --padding: 0 .8rem 0 .3rem;
+    @include from(xmedium) {
+        --padding: 0 1rem 0 .5rem;
+    }
+
+    @include from(xxlarge) {
+        --padding: 0
+    }
+
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--padding);
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+}
+
+.main-banner__layout {
+
+    --polygon: 0 0, 100% 0, 100% 100%, 0 98%;
+
+    @include from(xmedium) {
+        --polygon: 0 0, 100% 0, 100% 100%, 0 94%;
+    }
+
+    margin-bottom: 1rem;
+    min-width: var(--min-width);
+    margin-top: var(--header-height);
+    clip-path: polygon(var(--polygon));
+}
+
+// .main {
+//     background-color: lightblue;
+
+// }
+
+
+.main__layout {
+
+                // background-color: pink;
+    padding: 0 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+            // margin-bottom: 2rem;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+
+    display: grid;
+    grid-row-gap: 2.5rem;
+
+    // @include from(xmedium) {
+    //     text-align: left;
+    // }
+
+    @include from(large) {
+        padding: 0 1rem;
+        grid-row-gap: 3.5rem;
+    }
+
+    @include from(xlarge) {
+        grid-row-gap: 5rem;
+    }
+
+    @include from(xxlarge) {
+        padding: 0;
+    }
+}
+
+
+

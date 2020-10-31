@@ -1,0 +1,70 @@
+
+@mixin from($breakpoint) {
+    @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+        @media screen and (min-width: map-get($map: $breakpoints, $key: $breakpoint )) {
+            @content;
+        }
+    } @else if type-of($value: $breakpoint) == number and unit($breakpoint) == 'px' {
+        @media screen and (min-width: $breakpoint) {
+            @content;
+        }
+    }
+}
+
+
+// Contexto de 1rem = 16px, por lo tanto 1em = 16px.
+
+// Si defino nuevo contexto dentro del @mixin button:
+// font-size: 1.3em, entonces tenemos: 1.3*16 = 20.8px
+
+// Ahora, entonces: 1em = 20.8px dentro de @mixin button.
+
+@mixin button {
+    color: #fff;
+    padding: .5em 0;
+    position: relative;
+    border-radius: 2em;
+    text-transform: uppercase;
+    background-color: #20cf0f;
+    font-family: 'Oswald', sans-serif;
+    font-size: var(--font-size-button);
+    min-width: var(--min-width-button);
+    border: .144230769em solid transparent;
+    // transition: color .5s, background .5s, border .5s;
+
+    @if $pseudoclases {
+        &:focus {
+            color: #e28120;
+            border-color: #e28120;
+            background-color: transparent;
+        }
+        
+        &:hover {
+            color: white;
+            background-color: #e28120;
+        }
+    
+        &:active {
+            top: .05em;
+            left: .05em;
+            color: white;
+            background-color: darkred;
+            border-color: transparent;
+        }
+    }
+}
+
+
+@mixin ratio($w,$h) {
+    display: grid;
+    grid-template-columns: repeat($w,1fr);
+    grid-template-rows: repeat($h,1fr);
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+

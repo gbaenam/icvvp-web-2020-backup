@@ -1,0 +1,333 @@
+
+.section-series {
+
+    // section-series__title
+    --series-font-size-title: 1.4rem;
+    --series-margin-bottom-title: .2rem;
+
+    // section-series__subtitle
+    --series-font-size-subtitle: 1.2rem;
+
+    // section-series__image
+    --series-width-image: 60%;
+
+    // section-series__description
+    --series-margin-bottom-description: 1.5rem;
+    
+    // Referencia para button
+    // font-size: 1rem;
+
+    @include from(360px) {
+        // section-series__title
+        --series-font-size-title: 1.6rem;
+    }
+
+    @include from(medium) {
+        // section-series__title
+        --series-font-size-title: 1.7rem;
+    }
+
+    @include from(xmedium) {
+
+        // section-series__header
+        --series-align-self-header: flex-end;
+
+        // section-series__title
+        --series-font-size-title: 2rem;
+        --series-margin-bottom-title: .2rem;
+
+        // section-series__subtitle
+        --series-font-size-subtitle: 1.4rem;
+
+        // section-series__image
+        --series-width-image: 100%;
+
+        // section-series__description
+        --series-margin-bottom-description: 0;
+
+        // section-series__button
+        --series-align-self-button: flex-end;
+        --series-justify-self-button: center;
+
+        display: grid;
+        text-align: left;
+        grid-column-gap: 1.875rem;
+
+        grid-template-areas: 
+            "header header ratio ratio ratio"
+            "description description ratio ratio ratio"
+            "button button ratio ratio ratio";
+    }
+
+    
+    @include from(zlarge) {
+        // .section-series__title
+        --series-font-size-title: 2.5rem;
+
+        // section-series__subtitle
+        --series-font-size-subtitle: 1.8rem;
+
+        // section-series__description
+        --series-padding-description: 0 3rem 0 0;
+
+        // section-series__button
+        --series-justify-self-button: flex-start;
+    }
+
+
+    &__header {
+        grid-area: header;
+        align-self: var(--series-align-self-header);
+    }
+
+    &__title {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: var(--series-font-size-title);
+        margin-bottom: var(--series-margin-bottom-title);
+    }
+    
+    &__subtitle {
+        font-weight: 600;
+        margin: 0 0 1rem;
+        font-size: var(--series-font-size-subtitle);
+    }
+
+    &__ratio {
+        grid-area: ratio;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__image {
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: var(--series-width-image);
+    }
+    
+    &__description {
+        grid-area: description;
+        padding: var(--series-padding-description);
+        margin-bottom: var(--series-margin-bottom-description);
+    }
+}
+
+.button-series {
+    grid-area: button;
+    align-self: var(--series-align-self-button);    
+    justify-self: var(--series-justify-self-button);
+}
+
+
+
+/* Seccion escuelas de aprendizaje */
+// Learning schools section.
+.schools {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        --schools-font-size: 1.4rem;
+        font-size: var(--schools-font-size);
+        margin-bottom: .5rem;
+
+        text-transform: uppercase;
+        //          background-color: var(--red-rgba);
+
+
+        @include from(360px) {
+            --schools-font-size: 1.6rem;
+        }
+
+        @include from(medium) {
+            flex: 100%;
+            --schools-font-size: 1.7rem;
+            margin-bottom: 1rem;
+        }
+
+        @include from(xmedium) {
+            --schools-font-size: 2rem;
+            // font-size: 2rem;
+        }
+
+        @include from(zlarge) {
+            --schools-font-size: 2.5rem;
+            // font-size: 2.5rem;
+        }
+    }
+
+    &__subtitle {
+        margin: 0 0 1rem;
+        padding: 0 .5rem;
+                    // background-color: pink;
+                    
+        @include from(360px) {
+            font-size: 1rem;
+        }
+
+        @include from(420px) {
+            margin-bottom: 1.2rem;
+        }
+
+        @include from(medium) {
+            flex: 100%;
+            padding: 0 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        @include from(xxlarge) {
+            font-size: 1.3rem;
+        }
+
+        @include from(zlarge) {
+            font-size: 1.4rem;
+        }
+    }
+
+    @include from(medium) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    @include from(large) {
+        justify-content: space-between;
+    }
+    
+}
+
+.card {
+                // background-color: var(--orange-rgba);
+
+    // Referencia para button.
+    // font-size: 1rem;
+
+    margin-bottom: 2rem;
+
+    border-radius: 20px;
+
+
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, .8);
+
+
+
+    // border: 1px solid rgb(158, 145, 145);
+
+
+
+
+
+    @include from(medium) {
+        flex: 46% 0 0;
+    }
+
+    @include from(large) {
+        flex: 23% 0 0;
+    }
+
+    // Color escuela del ser, hexadecimal: #1275ed
+    &__tobe {
+        background-color: rgba(18, 117, 237, 1);
+    }
+    
+    // Color escuela del Permanecer, hexadecimal: #ce030b
+    &__stay {
+        background-color: rgba(206, 3, 11, 1);
+    }
+    
+    // Color escuela del Hacer, hexadecimal: #ffa500
+    &__do {
+        background-color: rgba(255, 165, 0, 1);
+    }
+    
+    // Color escuela de Pescadores, hexadecimal: #008000
+    &__fishermen {
+        background-color: rgba(0, 128, 0, 1);
+    }
+    
+    &__image {
+        margin-bottom: .5rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    &__image-school {
+        height: auto;
+        // width: 9.375rem;
+        // width: 120px;
+        width: 8em;
+
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // &__content {
+    //     background-color: var(--gray-rgba);
+    // }
+
+    
+    &__title {
+        // background-color: var(--green-rgba);
+
+                text-align: center;
+    }
+    
+    &__description {
+        // display: flex;
+        padding: 0 1rem;
+
+        // min-height: 250px;
+
+        min-height: 9rem;
+
+        @include from(medium) {
+            min-height: 10rem;
+        }
+
+        @include from(large) {
+            min-height: 14.375rem;
+        }
+
+        // min-height: 8rem;
+        // height: 8rem;
+
+        // min-height: 190px;
+        // flex-direction: column;
+        // justify-content: center;
+
+        // @include from(medium) {
+        //     min-height: 11.875rem;
+        // }
+    }
+    
+    &__text,
+    &__verse {
+        background-color: var(--yellow-rgba); 
+    }
+
+    &__verse {
+        margin: 0 0 .5rem;
+
+    }
+
+    &__footer {
+        display: flex;
+        min-height: 5rem;
+        align-items: center;
+        justify-content: center;
+                    background-color: var(--pink-rgba);
+                    
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+// .card:hover {
+    
+
+//     box-shadow: 0 5px 10px -2px rgba(0, 0, 0, .8);
+
+// }

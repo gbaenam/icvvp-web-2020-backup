@@ -1,0 +1,326 @@
+// $pseudoclases: false;
+
+.section-series {
+
+            // background-color: white;
+
+    // section-series__title
+    --series-font-size-title: 1.5rem;
+
+    // section-series__subtitle
+    --series-font-size-subtitle: 1.2rem;
+
+    // section-series__image
+    --series-width-image: 60%;
+
+    // section-series__description
+    --series-margin-bottom-description: 1.5rem;
+    
+    font-size: 1rem;
+
+    @include from(xmedium) {
+
+        // section-series__header
+        --series-grid-area-header: header;
+        --series-align-self-header: flex-end;
+
+        // section-series__title
+        --series-font-size-title: 2rem;
+        --series-margin-bottom-title: .2rem;
+
+        // section-series__subtitle
+        --series-font-size-subtitle: 1.4rem;
+
+        // section-series__ratio
+        --series-grid-area-ratio: ratio;
+
+        // section-series__image
+        --series-width-image: 100%;
+
+        // section-series__description
+        --series-margin-bottom-description: 0;
+        --series-grid-area-description: description;
+
+        // section-series__button
+        --series-grid-area-button: button;
+        --series-align-self-button: flex-end;
+        --series-justify-self-button: center;
+        
+        display: grid;
+        grid-column-gap: 1.875rem;
+
+        grid-template-areas: 
+            "header header ratio ratio ratio"
+            "description description ratio ratio ratio"
+            "button button ratio ratio ratio";
+    }
+
+    
+    @include from(zlarge) {
+        // .section-series__title
+        --series-font-size-title: 2.5rem;
+
+        // section-series__subtitle
+        --series-font-size-subtitle: 1.8rem;
+
+        // section-series__description
+        --series-padding-description: 0 3rem 0 0;
+
+        // section-series__button
+        --series-justify-self-button: flex-start;
+    }
+
+
+    &__header {
+        grid-area: var(--series-grid-area-header);
+        align-self: var(--series-align-self-header);
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: var(--series-font-size-title);
+        margin-bottom: var(--series-margin-bottom-title);
+    }
+    
+    &__title,
+    &__subtitle {
+        font-weight: 700;
+        font-family: 'News Cycle', sans-serif;
+    }
+    
+    &__subtitle {
+        margin: 0 0 1rem;
+        font-size: var(--series-font-size-subtitle);
+    }
+
+    &__ratio {
+        margin-left: auto;
+        margin-right: auto;
+        grid-area: var(--series-grid-area-ratio);
+    }
+
+    &__image {
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: var(--series-width-image);
+    }
+    
+    &__description {
+        padding: var(--series-padding-description);
+        grid-area: var(--series-grid-area-description);
+        margin-bottom: var(--series-margin-bottom-description);
+    }
+
+    &__button {
+        @include button;
+    }
+    
+    &__button {
+        grid-area: var(--series-grid-area-button);
+        align-self: var(--series-align-self-button);    
+        justify-self: var(--series-justify-self-button);
+    }
+}
+
+
+.schools {
+    display: flex;
+    flex-direction: column;
+
+    @include from(medium) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    &__title {
+        background-color: orange;
+        margin-bottom: 1rem;
+
+        @include from(medium) {
+            flex: 100%;
+        }
+    }
+}
+
+.card {
+    margin-bottom: 2rem;
+
+    @include from(medium) {
+        flex: 50%;
+    }
+
+    @include from(large) {
+        flex: 25%;
+    }
+
+    &__wrapper {
+        padding: 0 .5rem;
+
+        @include from(460px) {
+            padding: 0 1.5rem;
+        }
+
+        @include from(medium) {
+            padding: 0 1rem;
+        }
+
+        @include from(large) {
+            padding: 0 .8rem;
+        }
+    }
+
+    &__image {
+        padding: 0 0 1rem;
+
+                    background-color: red;
+
+        border-top-left-radius: 1.25rem;
+        border-top-right-radius: 1.25rem;
+    }
+
+    &__image-school {
+        height: auto;
+        width: 9.375rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    &__content {
+        display: flex;
+        min-height: 17.5rem;
+        flex-direction: column;
+
+                background-color: rgba(168, 168, 44, .3);          
+    }
+    
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__description {
+        padding: 0 1.5rem;
+    }
+
+    &__footer {
+        min-height: 5rem;
+        margin-top: auto;
+        background-color: lightblue;
+        border-bottom-right-radius: 1.25rem;
+        border-bottom-left-radius: 1.25rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// section schools
+// .schools {
+//     display: flex;
+//     flex-direction: column;
+
+
+    
+//     &__title {
+//         background-color: white;
+//         margin-bottom: 1rem;
+//     }
+    
+    
+//     @include from(medium) {
+//         flex-wrap: wrap;
+//         flex-direction: row;
+
+
+
+//         &__title {
+//             flex: 100%;
+
+//         }
+
+//     }
+// }
+
+// .school {
+
+//             background-color: lightgray;
+
+//     display: flex;
+//     flex-direction: column;
+
+
+
+//     color: white;
+//     font-size: 1rem;
+//     margin-bottom: 1rem;
+
+//     min-height: 500px;
+
+
+//     padding: 0 3rem 3rem;
+
+
+
+//     @include from(medium) {
+//         flex: 50%;
+//     }
+
+
+//     @include from(xlarge) {
+//         flex: 25%;
+//     }
+// }
+
+
+// .school__button {
+
+//     color: white;
+//     margin-top: auto;
+// }
+
+// .tobe {
+//     &__header {
+//         background-color: orange;
+//     }
+    
+//     &__text {
+//         background-color: gray;
+//     }
+// }
+
+
+// .stay {
+//     background-color: red;
+// }
+
+// .do {
+//     background-color: orange;
+// }
+
+// .fishermen {
+//     background-color: green;
+// }
+
+

@@ -1,0 +1,70 @@
+
+$color-burguer-border: #094293;
+$color-burguer-inner: #094293;
+
+/****** Burguer Button ******/
+.burguer-button {
+    
+    margin-left: auto;
+    padding: .05rem .2rem;
+    // border: 1px solid $color-burguer-border;
+    // border-radius: 8%;
+    // cursor: pointer;
+
+    @include from(xmedium) {
+        display: none;
+    }
+}
+
+.burguer-wrapper {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    // background-color: pink;
+}
+
+.burguer-inner,
+.burguer-inner::before,
+.burguer-inner::after {
+    width: 100%;
+    height: .25rem;
+    position: absolute;
+    border-radius: 1.25rem;
+    background-color: $color-burguer-inner;
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s;
+}
+
+.burguer-inner {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burguer-inner::before,
+.burguer-inner::after {
+    content: '';
+}
+
+.burguer-inner::before {
+    top: -200%;
+}
+
+.burguer-inner::after {
+    top: 200%;
+}
+
+.cruz {
+    transform: rotateZ(45deg);
+    top: 43%;
+
+    &::before {
+        transform: rotateZ(90deg);
+    }
+
+    &::before,
+    &::after {
+        top: 0;
+    }
+}
+
+
+

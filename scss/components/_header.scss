@@ -1,0 +1,80 @@
+
+/****** Main Header ******/
+.main-header {
+    
+    --logo-width: 3.6rem;
+    --title-font-size: 1.2rem;
+    --subtitle-font-size: 1rem;
+    --link-font-color: #094293;
+
+    @include from(xmedium) {
+        z-index: var(--z-normal);
+    }
+
+    @include from(zlarge) {
+        --title-font-size: 1.5rem;
+        --subtitle-font-size: 1.2rem;
+        --logo-width: 4rem;
+    }
+
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: var(--z-fixed);
+    height: var(--header-height);
+    background-color: var(--header-bg-color);
+    border-bottom: 1px solid var(--border-color);
+
+    &__block {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__name {
+        cursor: none;
+    }
+
+    &__title,
+    &__subtitle {
+        font-weight: 400;
+        font-family: var(--header-font-family-title);
+    }
+    
+    &__title {
+        font-size: var(--title-font-size);
+    }
+
+    &__subtitle {
+        margin: 0;
+        text-align: center;
+        font-size: var(--subtitle-font-size);
+    }
+
+    &__link-title,
+    &__link-subtitle {
+        cursor: none;
+        color: var(--link-font-color);
+
+        @include from(xmedium) {
+            cursor: pointer;
+        }
+    }
+
+    &__link-logo {
+        order: -1;
+        cursor: none;
+
+        @include from(xmedium) {
+            cursor: pointer;
+        }
+    }
+
+    &__logo {
+        height: auto;
+        margin-right: .3rem;
+        width: var(--logo-width);
+    }
+}
+
+
+

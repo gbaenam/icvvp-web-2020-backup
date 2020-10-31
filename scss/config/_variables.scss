@@ -1,0 +1,133 @@
+// En la carpeta config guardamos el código correspondiente a Mixins, Funciones y Variables.
+
+$breakpoints: (
+    medium: 640px,
+    xmedium: 960px,
+    large: 1024px,
+    xlarge: 1280px,
+    xxlarge: 1440px,
+    zlarge: 1600px,
+    zzlarge: 1920px
+);
+
+// Variables globales.
+:root {
+    --max-width: 1270px;
+    --min-width: 320px;
+    --header-height: 4rem;
+    @include from(zlarge) {
+        --header-height: 4.5rem;
+    }
+}
+
+// Font type.
+:root {
+    --body-font-family: 'Open Sans', sans-serif;
+    --h-font-family: 'News Cycle', sans-serif;
+    --header-font-family-title: 'Amaranth', sans-serif;
+    --banner-font-family-title: 'Noto Serif', serif;
+
+
+
+
+
+    // --h-font-family: 'Noto Serif', serif;
+
+    // --body-font-family: 'Lato', sans-serif;
+
+    // --title-font-family: 'Anton', sans-serif;
+    // --title-font-family: 'Quicksand', sans-serif;
+
+    // --title-font-family: 'optimusprinceps-webfont.woff2', Arial, sans-serif;
+
+    // @include from(xmedium) {
+    //     --menulink-font-family: 'Oswald', sans-serif;
+    // }
+}
+
+// Font size.
+:root {
+    --body-font-size: .9rem;
+    --small-font-size: .75rem;
+    --h1-font-size: 2rem;
+
+    @include from(xmedium) { 
+        --body-font-size: 1rem;
+        --small-font-size: .8rem;
+        --h1-font-size: 2.5rem;
+    }
+}
+
+// Paleta de colores
+:root {
+    // --header-bg-color: #d7d7d7;
+    --header-bg-color: white;
+    --menu-bg-color: #add8e6;
+    // --border-bg-color: #ccc;
+            --border-color: lightgray;
+
+
+    // Colores rgba de uso común.
+    --red-rgba: rgba(255, 0, 0, .3);
+    --blue-rgba: rgba(0, 0, 255, .3);
+    --gray-rgba: rgba(33, 62, 74, .2);
+    --green-rgba: rgba(0, 128, 0, .3);
+    --purple-rgba: rgba(90, 1, 65, .3);
+    --pink-rgba: rgba(255, 192, 203, 1);
+    --orange-rgba: rgba(255, 165, 0, .3);
+    --yellow-rgba: rgba(255, 255, 0, .5);
+}
+
+// Variables de apilamiento (z-index).
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+// Variables para button
+$pseudoclases: true !default;
+:root {
+    // button-main
+    --font-size-button: 1.3em;
+    --min-width-button: 16rem;
+
+    // button-card
+    --font-size-button-card: 1.3em;
+    --min-width-button-card: 16rem;
+
+
+    @include from(xmedium) {
+        // button-main
+        --font-size-button: 1.5em;
+        --min-width-button: 20rem;
+        --cursor-button: pointer;
+
+        // button-card
+        // --font-size-button: 1.5em;
+        // --min-width-button: 20rem;
+    }
+
+    @include from(large) {
+        // button-card
+        --font-size-button-card: 1em;
+        --min-width-button-card: 13rem;
+    }
+
+    @include from(xxlarge) {
+        // button-card
+        --font-size-button-card: 1.2em;
+        --min-width-button-card: 16rem;
+    }
+
+    @include from(zlarge) {
+        // button-main
+        --font-size-button: 1.8em;
+        --min-width-button: 28rem;
+    }
+}
+
+
+
